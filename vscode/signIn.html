@@ -1,119 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>獨白&mdash;SignIn</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-  
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900|Oswald:400,700" rel="stylesheet">
-    <link rel="icon" type="image/jpeg" href="images/favicon_ver2.jpg">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+<head>
+  <title>獨白&mdash;SignIn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900|Oswald:400,700" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="images/favicon_ver2.jpg">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/fancybox.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0" nonce="Uw2OsOh2"></script>
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
-    <div id="fb-root"></div>
-    
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0"
+    nonce="Uw2OsOh2"></script>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+  <div id="fb-root"></div>
+
 
   <div class="site-wrap">
 
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
       </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
-
-  <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
-    <div class="site-logo">
-      <a href="index.html">獨白&mdash;monologue</a>
+      <div class="site-mobile-menu-body"></div>
     </div>
 
-    <div class="signSection">
-      <a href="signIn.html">Sign In</a> / <a href="signUp.html" >Sign Up</a>
-    </div>
+    <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
+      <div class="site-logo">
+        <a href="index.html">獨白&mdash;monologue</a>
+      </div>
 
-    <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+      <div class="signSection">
+        <a href="signIn.html">Sign In</a> / <a href="signUp.html">Sign Up</a>
+      </div>
 
-    <div class="main-menu">
-      <ul class="js-clone-nav">
-        <li><a href="#section-home" class="nav-link">Home</a></li>
-        <li><a href="myPost.html" class="nav-link">My Post</a></li>
-        <li><a href="groupPost.html" class="nav-link">Group Post</a></li>
-        <li><a href="gallery.html" class="nav-link">gallery</a></li>
-        <li><a href="myPage.html" class="nav-link">My page</a></li>
-      </ul>
-      <ul class="social js-clone-nav"> <!-- 마이페이지에서 정보 입력 시 내 SNS 바로가기 -->
-        <li><a href="#"><span class="icon-facebook"></span></a></li>
-        <li><a href="#"><span class="icon-twitter"></span></a></li>
-        <li><a href="#"><span class="icon-instagram"></span></a></li>
-      </ul>
-    </div>
-  </header> 
+      <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#"
+          class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
-  <main class="main-content">
+      <div class="main-menu">
+        <ul class="js-clone-nav">
+          <li><a href="#section-home" class="nav-link">Home</a></li>
+          <li><a href="myPost.html" class="nav-link">My Post</a></li>
+          <li><a href="groupPost.html" class="nav-link">Group Post</a></li>
+          <li><a href="gallery.html" class="nav-link">gallery</a></li>
+          <li><a href="myPage.html" class="nav-link">My page</a></li>
+        </ul>
+        <ul class="social js-clone-nav">
+          <!-- 마이페이지에서 정보 입력 시 내 SNS 바로가기 -->
+          <li><a href="#"><span class="icon-facebook"></span></a></li>
+          <li><a href="#"><span class="icon-twitter"></span></a></li>
+          <li><a href="#"><span class="icon-instagram"></span></a></li>
+        </ul>
+      </div>
+    </header>
 
-    <section class="site-section-hero bg-image" style="background-image: url('images/indexImage.jpg');"  data-stellar-background-ratio="0.5" id="section-home">
+    <main class="main-content">
+
+      <section class="site-section-hero bg-image" style="background-image: url('images/indexImage.jpg');"
+        data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
-          <div class="col-md-7 text-center">
+          <div class="col-md-12 text-center">
             <h1 class="text-white heading text-uppercase" data-aos="fade-up"> Sign In</h1>
-            <div class="lead text-white mb-5 mt-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="lead text-white  mt-3" data-aos="fade-up" data-aos-delay="100">
+
               <!-- 일반 회원 로그인 -->
-                <form action="" method="POST" id="siginInForm">
-                    <div>
-                        <input  type="text" name="userId"/>
-                    </div>                  
-                    <div>
-                      <input  type="password" name="userPw"/>
-                  </div>                  
-                </form>
-                <p><a href="#" id="siginInButton" class="btn btn-info btn-md smoothscroll mt-3">Sign In</a></p>
+              <form action="" method="POST" id="siginInForm">
+                <div>
+                  <input type="text" name="userId" placeholder="&nbsp;ID" />
+                </div>
+                <div>
+                  <input type="password" name="userPw" placeholder="&nbsp;PASSWORD" />
+                </div>
+                <div class="mt-3">
+                  <span>
+                    <a href="signup.html" id="siginUpButton" class="btn btn-warning btn-md smoothscroll">Sign Up</a>
+                  </span>
+                  <strong style="font-size: 1.8em; padding-top:1em;" class="mt-5"> &nbsp; / &nbsp; </strong>
+                  <span>
+                    <a href="#" id="siginInButton" class="btn btn-info btn-md smoothscroll">Sign In</a>
+                  </span>
+                </div>
+              </form>
             </div>
+          </div>
 
-            <!-- 로그인 API -->
-            <div  id="siginInApiArea" class="lead text-white mb-5 mt-3" data-aos="fade-up" data-aos-delay="100">
-                  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                  <br><br>
-                  <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="true"></div>
-            </div>
-
-          </div>       
-        </div>     
+          <!-- 로그인 API -->
+          <div id="signInApiArea" class="ml-3 mb-5 " data-aos="fade-up" data-aos-delay="100">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <br><br>
+            <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with"
+              data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="true"></div>
+          </div>
       </section>
-      
-      
+
+
 
       <div class="row justify-content-center">
         <div class="col-md-12 text-center py-5">
           <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with
+            <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com"
+              target="_blank">Colorlib</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
+          </p>
         </div>
       </div>
-    </div>
+  </div>
   </main>
 
-</div> <!-- .site-wrap -->
+  </div> <!-- .site-wrap -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -127,11 +144,12 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/aos.js"></script>
-  
+
 
   <script src="js/jquery.fancybox.min.js"></script>
 
   <script src="js/main.js"></script>
-    
-  </body>
+
+</body>
+
 </html>

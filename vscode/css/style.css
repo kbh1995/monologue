@@ -10,8 +10,6 @@ body{line-height:1.7;color:gray;font-weight:400;font-size:1rem;background:#000}:
 }
 
 #siginInForm div input{
-  width:50%;
+  width:35%;
   margin-bottom:0.5em;
 }
-
-/
