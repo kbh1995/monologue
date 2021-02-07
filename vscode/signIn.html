@@ -11,6 +11,7 @@
   <link rel="icon" type="image/jpeg" href="images/favicon_ver2.jpg">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
+  <script src="css/signIn.css"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
@@ -24,10 +25,12 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/fancybox.min.css">
 
+
   <link rel="stylesheet" href="css/style.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0"
     nonce="Uw2OsOh2"></script>
+  
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
@@ -62,11 +65,11 @@
           <li><a href="#section-home" class="nav-link">Home</a></li>
           <li><a href="myPost.html" class="nav-link">My Post</a></li>
           <li><a href="groupPost.html" class="nav-link">Group Post</a></li>
-          <li><a href="gallery.html" class="nav-link">gallery</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
           <li><a href="myPage.html" class="nav-link">My page</a></li>
         </ul>
         <ul class="social js-clone-nav">
-          <!-- 마이페이지에서 정보 입력 시 내 SNS 바로가기 -->
+          <!-- 마이페이지에서 정보 입력 시 내 SNS 바로가기 / 정보 미 입력 시 등록 안내 문구 출력  -->
           <li><a href="#"><span class="icon-facebook"></span></a></li>
           <li><a href="#"><span class="icon-twitter"></span></a></li>
           <li><a href="#"><span class="icon-instagram"></span></a></li>
@@ -79,38 +82,44 @@
       <section class="site-section-hero bg-image" style="background-image: url('images/indexImage.jpg');"
         data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 text-center" style="position: absolute;"> 
             <h1 class="text-white heading text-uppercase" data-aos="fade-up"> Sign In</h1>
+            <p lass="text-white heading text-uppercase" data-aos="fade-up"> &nbsp; </p>
+            
             <div class="lead text-white  mt-3" data-aos="fade-up" data-aos-delay="100">
-
+           
               <!-- 일반 회원 로그인 -->
-              <form action="" method="POST" id="siginInForm">
-                <div>
-                  <input type="text" name="userId" placeholder="&nbsp;ID" />
-                </div>
-                <div>
-                  <input type="password" name="userPw" placeholder="&nbsp;PASSWORD" />
-                </div>
-                <div class="mt-3">
-                  <span>
-                    <a href="signup.html" id="siginUpButton" class="btn btn-warning btn-md smoothscroll">Sign Up</a>
-                  </span>
-                  <strong style="font-size: 1.8em; padding-top:1em;" class="mt-5"> &nbsp; / &nbsp; </strong>
-                  <span>
-                    <a href="#" id="siginInButton" class="btn btn-info btn-md smoothscroll">Sign In</a>
-                  </span>
-                </div>
+              <form action="" method="POST" id="siginInForm" >
+                  <input type="text" name="userId" placeholder="EMAIL" style="width: 300px; text-align: center;"/>
+                    <br>
+                  <input type="password" name="userPw" placeholder="PASSWORD" style="width: 300px; text-align: center;" />
               </form>
-            </div>
+
+           
+       
+                <div class="signBox" data-aos="fade-up" data-aos-delay="100">
+                  <a href="#" id="siginInButton" class="btn btn-info btn-md smoothscroll "  style="width: 300px;">Sign In</a>
+                  <strong class="text-white heading text-uppercase" data-aos="fade-up">  </strong>
+                  <p class="mt-2">
+                    <a href="signup.html" id="siginUpButton" class="btn btn-warning btn-md smoothscroll" style="width: 300px;">Sign Up</a>
+                  </p>
+                </div>
+              
+              </div>
           </div>
 
-          <!-- 로그인 API -->
-          <div id="signInApiArea" class="ml-3 mb-5 " data-aos="fade-up" data-aos-delay="100">
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          <!-- 로그인 API 
+          <div style="position: relative; margin-top: 40em;">
+            <div class="mb-2" data-aos="fade-up" data-aos-delay="100" style="margin-left: 7em;"> SNS로 로그인하기 </div>
+          <div id="signInApiArea" class="ml-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="g-signin2" data-onsuccess="onSignIn"  style="width: 300px;"></div>
             <br><br>
             <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with"
               data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="true"></div>
           </div>
+        </div> 
+        -->
+
       </section>
 
 

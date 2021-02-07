@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/fancybox.min.css">
 
     <link rel="stylesheet" href="css/style.css">
-
+    
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
   
@@ -44,9 +44,16 @@
       <a href="index.html">獨白&mdash;monologue</a>
     </div>
 
-    <div class="signSection">
-      <a href="signIn.html">Sign In</a> / <a href="signUp.html" >Sign Up</a>
-    </div>
+  <div class="signSection justify-content-center">
+    <!-- Large modal -->
+    <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target=".signUpModal">Sign Up</button>
+    &nbsp; / &nbsp;
+    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".signInModal">Sign In</button> 
+  </div>
+
+
+
+
 
     <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
@@ -68,6 +75,8 @@
 
   <main class="main-content">
 
+    
+
     <section class="site-section-hero bg-image" style="background-image: url('images/indexImage.jpg');"  data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-7 text-center">
@@ -75,11 +84,40 @@
             <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">
                 독백(獨白) <br>한 사람의 인물에 의해 행해지는, 누구로부터도 방해받거나 매개되지 않는 다소 긴 발화(發話)<br>·<br>·<br>·<br>당신의 이야기를 기록하세요
             </p>
+
+            
             <p><a href="writePost.html" class="btn btn-info btn-md smoothscroll">기록하기</a></p>
           </div>
         </div>
       </section>
 
+      
+
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-4">
+                    <form>
+                      <div>
+                        <input class="form-control" type="text" name="userId" placeholder="EMAIL">
+                      </div>
+                      <div>
+                        <input class="form-control" type="text" name="userPw" placeholder="PASSWORD">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-3">
+                    <button id="signInButton" class="btn btn-lg btn-primary">Sign In</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+      
     <div class="container-fluid">        
       <section class="site-section" id="section-testimonial">
         <div class="container">
@@ -258,6 +296,28 @@
   </main>
 
 </div> <!-- .site-wrap -->
+
+
+
+<!-- Modals -->
+<!-- 회원가입 -->
+<div class="modal fade signUpModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      나오냐고
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 로그인 -->
+<div class="modal fade signInModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  
+  </div>
+</div>
+
+
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
