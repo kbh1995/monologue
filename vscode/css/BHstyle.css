@@ -20,3 +20,26 @@
     width: 23em;
     text-align: center;
 }
+
+.nav-profile-img {
+    margin-left: 2em;
+    width: 8.1em;
+    height: 7.2em;
+    border-radius: 50%;
+}
+
+
+.nav-profile-img img {
+    width: 8em;
+    height: 7em;
+    border-radius: 50%;
+}
+
+
+.postWriteButtons {
+    margin-left: 70em;
+}
+
+.postWriteArea {
+    background-color: white;
+}
