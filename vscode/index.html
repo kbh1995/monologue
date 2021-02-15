@@ -4,7 +4,8 @@
     <title>獨白&mdash;monologue</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900|Oswald:400,700" rel="stylesheet">
     
     <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -21,9 +22,12 @@
 
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/fancybox.min.css">
-
+    <link rel="stylesheet" href="css/BHstyle.css">
     <link rel="stylesheet" href="css/style.css">
-    
+   
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0"
+    nonce="Uw2OsOh2"></script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
   
@@ -75,8 +79,6 @@
 
   <main class="main-content">
 
-    
-
     <section class="site-section-hero bg-image" style="background-image: url('images/indexImage.jpg');"  data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-7 text-center">
@@ -84,39 +86,10 @@
             <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">
                 독백(獨白) <br>한 사람의 인물에 의해 행해지는, 누구로부터도 방해받거나 매개되지 않는 다소 긴 발화(發話)<br>·<br>·<br>·<br>당신의 이야기를 기록하세요
             </p>
-
-            
             <p><a href="writePost.html" class="btn btn-info btn-md smoothscroll">기록하기</a></p>
           </div>
         </div>
       </section>
-
-      
-
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="row">
-              <div class="col-md-8">
-                <div class="row">
-                  <div class="col-md-4">
-                    <form>
-                      <div>
-                        <input class="form-control" type="text" name="userId" placeholder="EMAIL">
-                      </div>
-                      <div>
-                        <input class="form-control" type="text" name="userPw" placeholder="PASSWORD">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="col-md-3">
-                    <button id="signInButton" class="btn btn-lg btn-primary">Sign In</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-
       
     <div class="container-fluid">        
       <section class="site-section" id="section-testimonial">
@@ -302,18 +275,92 @@
 <!-- Modals -->
 <!-- 회원가입 -->
 <div class="modal fade signUpModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      나오냐고
-    </div>
-  </div>
+  <div class="modal-dialog modal-lg"> <!-- SignUp Modal -->
+    <div class="modal-content" >
+        <div class="row" >
+          <div class="col-md-8">
+            <div class="row signInModalStyle">
+            
+                <form id="signUpForm" method="POST">
+                  <div>
+                    <input class="form-control" type="text" name="userName" placeholder="NICKNAME ( 영문 및 한글, 숫자 허용 )">
+                  </div>
+                  <div>
+                    <input class="form-control" type="text" name="userId" placeholder="EMAIL ( 이메일 주소 인증 필요 )">
+                  </div>
+                  <div>
+                    <input class="form-control" type="password" name="userPw" placeholder="PASSWORD ( 8 ~ 16글자 / 영문과 숫자, 특수문자 혼용 )">
+                  </div>
+                  <div>
+                    <input class="form-control" type="password" name="userPwChk" placeholder="PASSWORD CHECK">
+                  </div>
+                </form>
+              
+              <button class="mt-5 btn btn-block btn-warning">Sign Up</button>
+            </div>
+          </div>
+          <div class="col-md-4 snsSignIn">
+            <h5 class="ml-5">&nbsp;&nbsp;&nbsp;SNS 회원가입</h5>
+            
+            <!-- Google SignUp API -->
+            
+
+            <!-- KAKAO SignUp API -->
+
+
+            <!-- FACEBOOK SignUp API -->
+
+
+          </div>
+        </div>
+    </div> <!-- SignUp Modal END -->
 </div>
 
 
 
 <!-- 로그인 -->
 <div class="modal fade signInModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  
+  <div class="modal-dialog modal-lg"> <!-- SignIn Modal -->
+    <div class="modal-content" >
+        <div class="row" >
+          <div class="col-md-8">
+            <div class="row signInModalStyle">
+              <div class="col-md-4">
+                <form id="signInForm">
+                  <div>
+                    <input class="form-control" type="text" name="userId" placeholder="EMAIL">
+                  </div>
+                  <div>
+                    <input class="form-control" type="text" name="userPw" placeholder="PASSWORD">
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-3">
+                <button class="signInButton btn btn-lg btn-primary">Sign In</button>
+              </div>
+              <button class="mt-5 btn btn-block btn-warning">Sign Up</button>
+            </div>
+          </div>
+          <div class="col-md-4 snsSignIn">
+            <h5 class="ml-5">&nbsp;&nbsp;&nbsp;SNS 로그인</h5>
+            
+            <!-- Google Login API -->
+            <div id="signInApiArea" class="ml-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="g-signin2" data-onsuccess="onSignIn"  style="width: 200px;"></div>
+              <br><br>
+              <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with"
+                data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="true"></div>
+            </div>
+
+            <!-- KAKAO Login API -->
+
+
+            <!-- FACEBOOK Login API -->
+
+
+          </div>
+        </div>
+    </div> <!-- SignIn Modal END -->
   </div>
 </div>
 

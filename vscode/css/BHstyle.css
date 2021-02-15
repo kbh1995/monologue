@@ -1,0 +1,22 @@
+.signInModalStyle {
+    margin: 5em;
+}
+
+.signInButton {
+    margin-left: 5.8em;
+    margin-top: 1.25em;
+}
+
+#signInForm div input {
+    width: 14em;
+}
+
+.snsSignIn {
+    margin-top:4.5em;
+}
+
+
+#signUpForm div input {
+    width: 23em;
+    text-align: center;
+}
